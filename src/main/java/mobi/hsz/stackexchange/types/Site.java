@@ -1,5 +1,6 @@
-package mobi.hsz.stackexchange.entity;
+package mobi.hsz.stackexchange.types;
 
+import java.util.Date;
 import java.util.List;
 
 public class Site {
@@ -8,20 +9,18 @@ public class Site {
     protected Styling styling;
     protected List<RelatedSite> relatedSites;
     protected List<String> markdownExtensions;
-    /**
-     * @TODO Convert to `Date` object
-     */
-    protected int launchDate;
+    protected Date launchDate;
     protected String siteState;
     protected String highResolutionIconUrl;
     protected String faviconUrl;
     protected String iconUrl;
     protected String audience;
-    protected String sitrUrl;
+    protected String siteUrl;
     protected String apiSiteParameter;
     protected String logoUrl;
     protected String name;
     protected String siteType;
+
 
     public List<String> getAliases() {
         return aliases;
@@ -55,11 +54,11 @@ public class Site {
         this.markdownExtensions = markdownExtensions;
     }
 
-    public int getLaunchDate() {
+    public Date getLaunchDate() {
         return launchDate;
     }
 
-    public void setLaunchDate(int launchDate) {
+    public void setLaunchDate(Date launchDate) {
         this.launchDate = launchDate;
     }
 
@@ -103,12 +102,12 @@ public class Site {
         this.audience = audience;
     }
 
-    public String getSitrUrl() {
-        return sitrUrl;
+    public String getSiteUrl() {
+        return siteUrl;
     }
 
-    public void setSitrUrl(String sitrUrl) {
-        this.sitrUrl = sitrUrl;
+    public void setSiteUrl(String siteUrl) {
+        this.siteUrl = siteUrl;
     }
 
     public String getApiSiteParameter() {
@@ -143,7 +142,7 @@ public class Site {
         this.siteType = siteType;
     }
 
-    private class Styling {
+    public class Styling {
 
         protected String tagBackgroundColor;
         protected String tagForegroundColor;
@@ -175,7 +174,7 @@ public class Site {
 
     }
 
-    private class RelatedSite {
+    public class RelatedSite {
 
         protected String relation;
         protected String siteUrl;

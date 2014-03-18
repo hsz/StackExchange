@@ -1,4 +1,4 @@
-package mobi.hsz.stackexchange.entity;
+package mobi.hsz.stackexchange.types;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -7,10 +7,12 @@ public class Error {
     @SerializedName("error_id")
     protected int id;
 
-    protected String description;
-
     @SerializedName("error_name")
     protected String name;
+
+    @SerializedName("error_message")
+    protected String message;
+
 
     public int getId() {
         return id;
@@ -20,20 +22,20 @@ public class Error {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 }
